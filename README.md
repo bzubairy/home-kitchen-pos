@@ -7,6 +7,25 @@ recipes; record expenses; and see real profit.
 Built for a two-person home kitchen in Pakistan, and kept configurable so anyone can use it.
 Everything runs on free tiers (Supabase + Vercel), with no app store and no monthly fees.
 
+## Screenshots
+
+From **Messy Bitess**, the home kitchen this was built for (customer names blurred).
+A fresh copy starts as "Demo Kitchen" with a placeholder logo.
+
+**Staff app**
+
+| Home | Orders | New order |
+|:---:|:---:|:---:|
+| <img src="screenshots/staff-home.png" width="240" alt="Home dashboard with today's and this month's sales, profit and low-stock warnings"> | <img src="screenshots/staff-orders.png" width="240" alt="Delivered orders with customer codes such as SHAKE-AUQ"> | <img src="screenshots/staff-new-order.png" width="240" alt="New order form with channel buttons and menu items"> |
+
+| Stock | Menu & recipes | Reports |
+|:---:|:---:|:---:|
+| <img src="screenshots/staff-stock.png" width="240" alt="Stock list with items running low"> | <img src="screenshots/staff-menu.png" width="240" alt="Menu items with recipe cost and profit"> | <img src="screenshots/staff-reports.png" width="240" alt="Monthly report with sales, expenses, profit and best sellers"> |
+
+| Settings | Customer website | Website checkout |
+|:---:|:---:|:---:|
+| <img src="screenshots/staff-settings.png" width="240" alt="Settings with staff name, notifications and receipt printer width"> | <img src="screenshots/site-menu.png" width="240" alt="Customer ordering website menu with sold-out labels"> | <img src="screenshots/site-checkout.png" width="240" alt="Website checkout with order summary and delivery details"> |
+
 ## What's included
 
 **Staff app** (`app/`): an installable web app for iPhone and Android.
