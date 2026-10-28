@@ -1,0 +1,8 @@
+# Supabase CLI settings used when deploying the Edge Function.
+# Replace with your own project reference (Project Settings → General → Reference ID).
+project_id = "your-project-ref"
+
+[functions.notify-new-order]
+# Called by a database trigger, not by signed-in users. The function itself only
+# announces fresh, not-yet-announced website orders, so it's safe without a JWT.
+verify_jwt = false

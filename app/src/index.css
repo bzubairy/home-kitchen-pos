@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #fff7ed;
+  --color-brand-100: #ffedd5;
+  --color-brand-500: #f97316;
+  --color-brand-600: #ea580c;
+  --color-brand-700: #c2410c;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  @apply bg-stone-50 text-stone-900 antialiased dark:bg-stone-950 dark:text-stone-100;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl bg-white p-4 shadow-sm dark:bg-stone-900;
+  }
+  .input {
+    @apply w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-base outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100 dark:border-stone-700 dark:bg-stone-900;
+  }
+  .btn-primary {
+    @apply rounded-xl bg-brand-600 px-4 py-3 font-semibold text-white active:bg-brand-700 disabled:opacity-60;
+  }
+  .btn-secondary {
+    @apply rounded-xl border border-stone-300 px-4 py-3 font-semibold active:bg-stone-100 dark:border-stone-700 dark:active:bg-stone-800;
+  }
+}
+
+/* ── Receipt printing ── */
+.receipt {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.35;
+  color: #000;
+}
+.receipt hr {
+  border: 0;
+  border-top: 1px dashed #000;
+  margin: 1.5mm 0;
+}
+.receipt img {
+  display: block;
+  margin: 0 auto;
+}
+.receipt-center {
+  text-align: center;
+}
+.receipt-title {
+  font-size: 1.5em;
+  font-weight: 800;
+}
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2mm;
+}
+.receipt-row span:last-child {
+  white-space: nowrap;
+}
+.receipt-bold {
+  font-weight: 700;
+}
+.receipt-big {
+  font-size: 1.2em;
+}
+.receipt-notes {
+  white-space: pre-wrap;
+}
+
+@media print {
+  /* Print only the receipt: hide the app and the preview's chrome. */
+  body.printing-receipt #root,
+  body.printing-receipt .receipt-preview > :not(:first-child) {
+    display: none !important;
+  }
+  body.printing-receipt,
+  body.printing-receipt .receipt-preview,
+  body.printing-receipt .receipt-preview > div,
+  body.printing-receipt .receipt-preview > div > div {
+    position: static !important;
+    display: block !important;
+    overflow: visible !important;
+    background: #fff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    width: auto !important;
+  }
+}

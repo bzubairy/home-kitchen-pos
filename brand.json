@@ -1,0 +1,23 @@
+{
+  "name": "Demo Kitchen",
+  "tagline": "Fresh, homemade, delivered.",
+  "instagramHandle": "",
+  "currencySymbol": "Rs",
+  "locale": "en-PK",
+  "timeZone": "Asia/Karachi",
+  "phoneCountryCode": "92",
+  "walletName": "JazzCash",
+  "messages": {
+    "preparing": "Hi {firstName}! 👋 Your {business} order {code} is being prepared. It'll be with you soon.",
+    "delivered": "Your {business} order {code} has been delivered. Enjoy! 😋 Thanks for ordering."
+  },
+  "categoryOrder": ["Burgers", "Wraps", "Fries", "Drinks", "Desserts"],
+  "categoryEmoji": {
+    "Burgers": "🍔",
+    "Wraps": "🌯",
+    "Fries": "🍟",
+    "Drinks": "🥤",
+    "Desserts": "🍰"
+  },
+  "defaultEmoji": "🍽️"
+}
